@@ -1,7 +1,5 @@
 
-* {
-  box-sizing: border-box;
-}
+@import url("../index.css");
 
 .body {
   min-height: 72vh;

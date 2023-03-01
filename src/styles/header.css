@@ -1,7 +1,5 @@
 
-* {
-  box-sizing: border-box;
-}
+@import url("../index.css");
 
 .header {
   width: 90%;

@@ -1,4 +1,6 @@
 
+@import url("../index.css");
+
 .houses-container {
     background: #F7F7F7;
     border-radius: 25px;
@@ -55,7 +57,7 @@
     font-size: 18px;
     line-height: 26px;
     color: #FFFFFF;
-    padding: 0 10px;
+    padding: 0 15px;
     position: absolute;
 }
 
@@ -72,5 +74,11 @@
     .house-card {
         width: 100%;
         aspect-ratio: 67/51;
+    }
+
+    .house-name {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
     }
 }
