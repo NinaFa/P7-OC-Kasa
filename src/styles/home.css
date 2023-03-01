@@ -1,0 +1,13 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  min-height: 72vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}

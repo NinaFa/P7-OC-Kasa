@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+    width: 100%;
+    min-height: 15vh;
+    padding: 10px;
+    gap: 15px;
+    margin-bottom: 0;
+}
+
+.logofooter {
+    height: 4vh;
+    width: auto;
+}
+
+.copyright {
+    display: flex;
+    align-items: flex-end;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+}
