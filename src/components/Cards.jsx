@@ -2,7 +2,7 @@
 import React from "react";
 import "../styles/cards.css";
 import { Link } from "react-router-dom";
-import Data from "../data/LogementsList";
+import Data from "../data/HouseList";
 
 function Cards() {
     const ImgContainerStyle = {

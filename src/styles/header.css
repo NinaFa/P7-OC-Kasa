@@ -19,6 +19,7 @@
 .logo-header {
   height: 5vh;
   width: auto;
+  cursor: pointer;
 }
   
 .nav-links :nth-child(1) {
@@ -47,6 +48,7 @@
     font-weight: 500;
     line-height: 17px;
   }
+  
   .logo img {
     width: 100px;
   }
