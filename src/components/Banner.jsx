@@ -3,6 +3,7 @@ import React from "react";
 import "../styles/banner.css";
 
 function Banner(props) {
+
     if (props.origin === "home") {
         return(
             <div className="banner-container-home">
@@ -16,14 +17,6 @@ function Banner(props) {
         return(
             <div className="banner-container-about">
                 <img src={props.img} alt="Kasa - À propos" />
-                <div className="banner-overlay"></div>
-            </div> 
-        )}
-
-    else if (props.origin === "logement") {
-        return(
-            <div className="banner-container-logement">
-                <img src={props.img} alt="Kasa - Détails sur le logement" />
                 <div className="banner-overlay"></div>
             </div> 
         )}

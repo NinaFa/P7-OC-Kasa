@@ -4,8 +4,9 @@
 .header {
   width: 90%;
   margin: auto;
-  min-height: 10vh;
+  height: 200px;
   max-width: 1440px;
+  flex: 0 0 100%;
 }
 
 .navbar {
@@ -17,7 +18,7 @@
 }
 
 .logo-header {
-  height: 5vh;
+  height: 40px;
   width: auto;
   cursor: pointer;
 }
@@ -49,7 +50,13 @@
     line-height: 17px;
   }
   
-  .logo img {
-    width: 100px;
+  .header {
+    height: 40px;
+  }
+
+  .logo-header {
+    height: 30px;
+    width: auto;
+    cursor: pointer;
   }
 }

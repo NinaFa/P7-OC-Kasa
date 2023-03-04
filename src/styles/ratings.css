@@ -1,0 +1,15 @@
+
+@import url("../index.css");
+@import url("./home.css");
+
+.star {
+    width: 30px;
+    padding-left: 5px;
+};
+
+@media (max-width: 820px) {
+    .star {
+    height: 22px;
+    padding: 15px 5px;
+    }
+};

@@ -1,4 +1,6 @@
 
+@import "./normalize.css";
+
 /* Import de la police "Monserrat" utilisée */
 @import url(https://fonts.googleapis.com/css2?family=Lato:wght@300;500;700;900&family=Montserrat:wght@200;300;400;500;600;700;800&display=swap);
 
@@ -6,8 +8,10 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    margin: auto;
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

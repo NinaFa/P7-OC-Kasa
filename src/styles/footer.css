@@ -9,14 +9,13 @@
     color: white;
     background-color: black;
     width: 100%;
-    min-height: 15vh;
+    height: 125px;
     padding: 10px;
     gap: 15px;
-    margin-bottom: 0;
 }
 
 .logofooter {
-    height: 4vh;
+    height: 35px;
     width: auto;
 }
 

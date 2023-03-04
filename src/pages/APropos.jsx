@@ -1,4 +1,5 @@
 
+import React from "react";
 import '../styles/a-propos.css';
 import Banner from '../components/Banner.jsx';
 import Collapse from '../components/Collapse.jsx';

@@ -4,7 +4,7 @@ import './index.css';
 import Home from './pages/Home.jsx';
 import APropos from './pages/APropos';
 import Logement from './pages/Logement';
-import Error404 from './pages/Erreur404.jsx';
+import Erreur404 from './pages/Erreur404.jsx';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 
@@ -20,7 +20,7 @@ root.render(
         <Route path = "/" element ={<Home />} />
         <Route path = "/a-propos" element ={<APropos />} />
         <Route path = "/logement/:id" element ={<Logement />} />
-        <Route path = "*" element ={<Error404 />} /> 
+        <Route path = "*" element ={<Erreur404 />} /> 
       </Routes>
       <Footer />
       </BrowserRouter>

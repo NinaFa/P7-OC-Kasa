@@ -5,7 +5,7 @@ import ArrowUp from "../assets/up-arrow.svg"
 import ArrowDown from "../assets/down-arrow.svg"
 
 function Collapse(props) {
-  // Déclaration d'une nouvelle variable d'état, appelée "collapseState"
+  // Déclaration d'une nouvelle variable d'état, appelée "collapseOpen"
   const [collapseOpen, setCollapseOpen] = useState(false);
 
   return (
@@ -19,7 +19,7 @@ function Collapse(props) {
                 <img src={ArrowUp} alt="Cliquez pour fermer ce module." title="Cliquez pour fermer ce module." />
             </div>
             <div className="collapse-description">
-                    <p>{props.description}</p>
+                    <p className="collapse-description-text">{props.description}</p>
             </div>
         </> ) 
     
@@ -32,6 +32,8 @@ function Collapse(props) {
             </div>
         </> )} 
 
-    </div> )};
+    </div> 
+    )
+};
 
 export default Collapse;

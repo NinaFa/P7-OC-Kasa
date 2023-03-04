@@ -6,6 +6,13 @@
     width: 70%;
     display: flex;
     flex-flow: column wrap;
-    gap: 2rem;
-    margin-bottom: 5rem;
+    gap: 1.5rem;
+    margin: 2rem 0 5rem 0;
 }
+
+@media (max-width: 820px) {
+    .collapse-container {
+        width: 90%;
+        margin: 1rem 0 2rem 0;
+    }
+};

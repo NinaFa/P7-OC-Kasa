@@ -1,8 +1,7 @@
 
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import logoPrimary from "../assets/LOGO-primary.svg";
-// import Home from '../pages/Home.jsx';
+import logoPrimary from "../assets/LOGO-primary.png";
 import "../styles/header.css";
 
 
@@ -21,10 +20,10 @@ function Header() {
                     <img className="logo-header" src={logoPrimary} alt="logo" onClick={HomeRedirect} /> 
                 </div>
                 <div className="nav-links">
-                    <NavLink to="/">
+                    <NavLink to="/" className="nav-link">
                         Accueil
                     </NavLink>
-                    <NavLink to="/a-propos">
+                    <NavLink to="/a-propos" className="nav-link">
                         A Propos
                     </NavLink>
                 </div>
