@@ -1,10 +1,10 @@
 
 import React from "react";
-import "../styles/tag.css";
+import styles from "./tags.module.css";
 
 function Tags(props) {
     return (
-        <span className="tag">
+        <span className={styles.tag}>
             {props.tag}
         </span>
     )

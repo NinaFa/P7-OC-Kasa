@@ -1,31 +1,25 @@
 
 import React from "react";
-import "../styles/cards.css";
+import styles from "./cards.module.css";
 import { Link } from "react-router-dom";
 import Data from "../data/HouseList";
 
 function Cards() {
-
-    const ImgContainerStyle = {
-        width: '100%',
-        height: '100%',
-    }
-
-    // REVOIR LE INLINE STYLE : BUG DU NAVIGATEUR ?
+// retourner la liste des logements sous forme de cards
     return(
-        <div className="houses-container">
+        <section className={styles.houses_container}>
 
-            { Data.map((house) =>
-            <Link to = {`logement/${house.id}`} key= {house.id} className="house-card">
-                    <div style={ImgContainerStyle} className="img-container">
-                        <img className="house-img" src={house.cover} alt={house.title} />
-                        <div className="overlay"></div>
+            { Data.map((house) => // création d'une card pour chaque logement de la liste
+            <Link to = {`logement/${house.id}`} key={house.id} className={styles.house_card}>
+                    <div className={styles.img_container}>
+                        <img className={styles.house_img} src={house.cover} alt={house.title} />
+                        <div className={styles.overlay}></div>
                     </div>
-                    <h2 className="house-name">{house.title}</h2>            
+                    <h2 className={styles.house_name}>{house.title}</h2>            
             </Link>
             )}
             
-        </div>
+        </section>
     )
 }
 

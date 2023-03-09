@@ -1,71 +1,69 @@
 
-import React, { useEffect } from "react";
-import { useNavigate, useParams} from "react-router-dom";
+import React from "react";
+import { Navigate, useParams } from "react-router-dom";
 import Collapse from "../components/Collapse.jsx";
 import Slideshow from "../components/Slideshow.jsx";
 import Tags from "../components/Tags.jsx";
 import Host from "../components/Host.jsx";
 import Rating from "../components/Rating.jsx";
 import Data from "../data/HouseList.json";
-import "../styles/logement.css";
+import "./logement.css";
 
 function Logement() {
-
+    // trouver l'id depuis les paramètres de l'URL, puis retrouver le logement associé à l'id dans le fichier JSON
     const { id } = useParams();
     console.log(id);
-    const house = Data.find ((house) => house.id === id);
+    const house = Data.find((house) => house.id === id);
     console.log(house);
-    const navigate = useNavigate ();
 
-    useEffect (() => {
-        if (house.length === 0) {
-            navigate ("../pages/Erreur404")
-        }
-    },);
+    if (!house) {
+        // si l'id ne correspond à aucun logement enregistré, redirection vers la page d'Erreur 404
+        return <Navigate to="404" />;
+    }
 
+    // si un logement est associé à l'id, retourner la page Logement avec les informations détaillées
     return (
-        <div className="body product-container">
-            <Slideshow pictures={house.pictures} alt={house.title} />
+            <main className="body product_container">
+                <Slideshow pictures={house.pictures} alt={house.title} />
 
-            <div className="main-info">
+                <section className="main_info">
 
-                <div className="practical-info">
-                    <h1 className="house-title">{house.title}</h1>
-                    <p className="house-location">{house.location}</p>
-                    <div className="tags">
-                        {house.tags.map((tag, index) => (
-                        <Tags key={`${house.id}`+tag} tag={tag} />))}
+                    <div className="practical_info">
+                        <h1 className="house_title">{house.title}</h1>
+                        <p className="house_location">{house.location}</p>
+                        <div className="tags">
+                            {house.tags.map((tag, index) => (
+                            <Tags key={`${house.id}`+tag} tag={tag} />))}
+                        </div>
                     </div>
-                </div>
 
-                <div className="social-info">
-                    <Host
-                        host={house.host}
-                    />
-                    <Rating 
-                        rating={house.rating}
-                    />
-                </div>
+                    <aside className="social_info">
+                        <Host
+                            host={house.host}
+                        />
+                        <Rating 
+                            rating={house.rating}
+                        />
+                    </aside>
 
-            </div>
+                </section>
 
-            <div className="details">
-                <div className="product-collapse" >
-                    <Collapse 
-                        title="Description" 
-                        description={house.description}
-                    />
-                </div>
-                <div className="product-collapse" >
-                    <Collapse
-                        title="Équipements"
-                        description={house.equipments.map((equipment, index) => (
-                            <p key={`${house.id}`+index}>{equipment}</p>))}
-                    />
-                </div>
-            </div>
-        </div>
-    )
+                <section className="details">
+                    <div className="product_collapse" >
+                        <Collapse 
+                            title="Description" 
+                            description={house.description}
+                        />
+                    </div>
+                    <div className="product_collapse" >
+                        <Collapse
+                            title="Équipements"
+                            description={house.equipments.map((equipment, index) => (
+                                <span className="equipment_item" key={`${house.id}`+index}>{equipment}</span>))}
+                        />
+                    </div>
+                </section>
+            </main> )
 };
 
 export default Logement;

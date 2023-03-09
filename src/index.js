@@ -12,6 +12,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 // import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// Rendering de l'application, avec ses composants <Header /> et <Footer /> ainsi que ses différentes routes
 root.render(
     <React.StrictMode>
       <BrowserRouter>

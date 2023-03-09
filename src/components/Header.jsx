@@ -2,33 +2,37 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import logoPrimary from "../assets/LOGO-primary.png";
-import "../styles/header.css";
+import styles from "./header.module.css";
 
 
 function Header() {
 
+    // définition de la fonction onClick pour rediriger l'utilisateur vers la page d'accueil au clic sur le logo
     let navigate = useNavigate(); 
-    const HomeRedirect = () =>{ 
+    const HomeRedirect = () => { 
         let path = `/`; 
         navigate(path);
     }
 
     return (
-        <div className="header">
-            <div className="navbar">
-                <div className="logo-header">
-                    <img className="logo-header" src={logoPrimary} alt="logo" onClick={HomeRedirect} /> 
+        <header className={styles.header}>
+            <div className={styles.navbar}>
+
+                <div className={styles.header_logo}>
+                    <img className={styles.header_logo} src={logoPrimary} alt="logo" onClick={HomeRedirect} />
                 </div>
-                <div className="nav-links">
-                    <NavLink to="/" className="nav-link">
+
+                <nav className={styles.nav_links}>
+                    <NavLink to="/" className={styles.nav_link}>
                         Accueil
                     </NavLink>
-                    <NavLink to="/a-propos" className="nav-link">
+                    <NavLink to="/a-propos" className={styles.nav_link}>
                         A Propos
                     </NavLink>
-                </div>
+                </nav>
+
             </div>
-        </div>
+        </header>
     )
 };
 

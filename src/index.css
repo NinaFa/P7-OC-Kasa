@@ -1,4 +1,4 @@
-
+/* Import d'un fichier Normalize */
 @import "./normalize.css";
 
 /* Import de la police "Monserrat" utilisée */
@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 
-
+/* Paramètres généraux de la balise dans laquelle l'application est rendered  */
 #root {
     min-height: 100vh;
     display: flex;

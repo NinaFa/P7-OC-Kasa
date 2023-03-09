@@ -1,25 +1,27 @@
 
 import React from "react";
-import "../styles/banner.css";
+import styles from "./banner.module.css";
 
-function Banner(props) {
+function Banner(props) { // composant <Banner /> s'adaptant aux pages Home et A Propos (styles, image, titres et attributs alt)
 
     if (props.origin === "home") {
         return(
-            <div className="banner-container-home">
+            <section className={styles.banner_container_home}>
                 <img src={props.img} alt="Kasa - Chez vous, partout et ailleurs." />
-                <div className="banner-overlay"></div>
-                <h1 className="slogan">Chez vous,<br className="line-break-mobile"/> partout et ailleurs</h1>
-            </div> 
-        )}
+                <div className={styles.banner_overlay}></div>
+                <h1 className={styles.slogan}>Chez vous,<br className={styles.br} /> partout et ailleurs</h1>
+            </section> 
+        )
+    }
 
     else if (props.origin === "about") {
         return(
-            <div className="banner-container-about">
+            <section className={styles.banner_container_about}>
                 <img src={props.img} alt="Kasa - À propos" />
-                <div className="banner-overlay"></div>
-            </div> 
-        )}
+                <div className={styles.banner_overlay}></div>
+            </section> 
+        )
+    }
 };
 
 export default Banner;

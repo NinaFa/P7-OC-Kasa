@@ -2,7 +2,7 @@
 @import url("../index.css");
 @import url("./home.css");
 
-.error-container {
+.error_container {
     color: #FF6060;
     font-family: 'Montserrat', sans-serif;
     width: 90%;
@@ -10,22 +10,24 @@
     text-align: center;
 }
 
-.error-title {
+.error_title {
     font-style: normal;
     font-weight: 700;
     font-size: 200px;
-    margin-bottom: 10px;
-};
+    margin-bottom: 20px;
+}
 
-.error-baseline {
+.error_baseline {
     font-style: normal;
-    font-weight: 500;
-    font-size: 36px;
+    font-weight: 400;
+    font-size: 28px;
     line-height: 142.6%;
-    margin-bottom: 30px;
-};
+    margin-bottom: 50px;
+}
 
-.error-link {
+a.error_link,
+a.error_link:visited,
+a.error_link:active {
     text-decoration: underline;
     font-style: normal;
     font-weight: 500;
@@ -37,7 +39,7 @@
 }
 
 @media (max-width: 820px) {
-    .error-title {
+    .error_title {
         font-size: 100px;
     }
 }
